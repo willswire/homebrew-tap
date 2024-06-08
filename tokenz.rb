@@ -5,21 +5,21 @@
 class Tokenz < Formula
   desc "Store tokens in Apple Keychain for easy access in Terminal"
   homepage "https://github.com/willswire/tokenz"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
   depends_on :macos
 
   on_intel do
-    url "https://github.com/willswire/tokenz/releases/download/v0.0.1/tokenz_v0.0.1_macOS_x86_64.tar.gz"
-    sha256 "6dfcbdbb9180da644fcfe18e4a4292a92a6200ed94aec4f62f900eb61cffb3e5"
+    url "https://github.com/willswire/tokenz/releases/download/v0.0.2/tokenz_v0.0.2_macOS_x86_64.tar.gz"
+    sha256 "cb3ccc3a3ed8988607c4118ca265f775a5d6a9c30a60923b0542642b8e1605de"
 
     def install
       bin.install "tokenz"
     end
   end
   on_arm do
-    url "https://github.com/willswire/tokenz/releases/download/v0.0.1/tokenz_v0.0.1_macOS_arm64.tar.gz"
-    sha256 "40b69f1d891d4368fec098b6669f0ca7e1e5f39463963bfa0e5066698912db40"
+    url "https://github.com/willswire/tokenz/releases/download/v0.0.2/tokenz_v0.0.2_macOS_arm64.tar.gz"
+    sha256 "d87f0cda02d5d6254d93d8e5a962656fb6ed6e33ca585667374b2ce0429ebbe7"
 
     def install
       bin.install "tokenz"
