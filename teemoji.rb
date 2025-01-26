@@ -1,12 +1,11 @@
 class Teemoji < Formula
   desc "Like tee but with emojis 🍵"
   homepage "https://github.com/willswire/teemoji"
-  url "https://github.com/willswire/teemoji/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "360879396ff53781a361236e9fc16bff2178301505092c712862db4de3502c05"
+  url "https://github.com/willswire/teemoji/archive/refs/tags/v0.0.2.tar.gz"
+  sha256 "0ab624dfd16753fc372ea715a1ccd425ed291d721746df4003189fa91a22c804"
   license "MIT"
 
-  depends_on xcode: [">= 16.2", :build]
-  depends_on macos: :sequoia
+  depends_on macos: :big_sur
 
   def install
     system "swift", "build", "--configuration", "release", "--disable-sandbox"
