@@ -1,8 +1,8 @@
 class Teemoji < Formula
   desc "Like tee but with emojis 🍵"
   homepage "https://github.com/willswire/teemoji"
-  url "https://github.com/willswire/teemoji/releases/download/v0.0.4/teemoji.tar.gz"
-  sha256 "c3d7ca2a459a43b0884efbb491d544049bd39040cf391de0cce63579cd12285b"
+  url "https://github.com/willswire/teemoji/releases/download/v0.0.5/teemoji.tar.gz"
+  sha256 "e32fde63b1a26968cd8b0ad8f899c0eee025d82c52f304a67a9823fe05d82b37"
   license "MIT"
 
   depends_on macos: :big_sur
