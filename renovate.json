@@ -1,14 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "regexManagers": [
-    {
-      "fileMatch": ["\\.rb$"],
-      "matchStrings": [
-        "url \"https://github.com/.*/archive/refs/tags/v(?<currentValue>\\d+\\.\\d+\\.\\d+)\\.tar\\.gz\""
-      ],
-      "datasourceTemplate": "github-releases",
-      "extractVersionTemplate": "v(?<version>.*)"
-    }
-  ]
+  "extends": ["config:recommended"]
 }
