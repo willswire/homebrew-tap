@@ -5,6 +5,11 @@ class Umoci < Formula
   sha256 "c01b36de6fdc513eb65add57bc882d72f94fc3b4b65a8f9ef59826fb754af93e"
   license "Apache-2.0"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   depends_on "go" => :build
 
   def install
