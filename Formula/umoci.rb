@@ -7,7 +7,7 @@ class Umoci < Formula
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/)
   end
 
   depends_on "go" => :build
