@@ -5,11 +5,6 @@ class Teemoji < Formula
   sha256 "38a5ca6bed9ce20923dab5a13c1040ef24cbf305a73f782f389145e0074f4ad4"
   license "MIT"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/)
-  end
-
   depends_on macos: :big_sur
 
   def install    

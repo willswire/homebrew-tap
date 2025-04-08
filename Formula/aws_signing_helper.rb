@@ -5,11 +5,6 @@ class AwsSigningHelper < Formula
   sha256 "db7e204361e4c896a8662a0a04b0b707f2b93ec1d0ec356933982cc4fe2a86a8"
   license "Apache-2.0"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/)
-  end
-
   depends_on "go" => :build
   
   def install
