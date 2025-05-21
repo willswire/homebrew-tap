@@ -1,8 +1,8 @@
 class Umoci < Formula
   desc "Modifies Open Container images"
   homepage "https://umo.ci/"
-  url "https://github.com/opencontainers/umoci/archive/refs/tags/v0.4.7.tar.gz"
-  sha256 "c01b36de6fdc513eb65add57bc882d72f94fc3b4b65a8f9ef59826fb754af93e"
+  url "https://github.com/opencontainers/umoci/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "394b79fb382746e3a456bae5966d7b6b7c4bae406efdb1e7ba0bd09e7a652762"
   license "Apache-2.0"
 
   depends_on "go" => :build
