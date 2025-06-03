@@ -1,8 +1,8 @@
 class AwsSigningHelper < Formula
   desc "rolesanywhere-credential-helper implements the signing process for IAM Roles Anywhere"
   homepage "https://github.com/aws/rolesanywhere-credential-helper"
-  url "https://github.com/aws/rolesanywhere-credential-helper/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "71e65229ce523e019dae411a18094ecaa642e801e8520b8548c18561576f994b"
+  url "https://github.com/aws/rolesanywhere-credential-helper/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "5a7ba93d632639c5f329efddc3342fc7c252a5933dffdee6653fcbe600c44f25"
   license "Apache-2.0"
 
   depends_on "go" => :build
