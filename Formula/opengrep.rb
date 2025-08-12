@@ -4,8 +4,8 @@ class Opengrep < Formula
   version "1.2.0"
   
   if Hardware::CPU.arm?
-    url "https://github.com/opengrep/opengrep/archive/refs/tags/v1.2.1.tar.gz"
-    sha256 "f8b852ca0da1b9a63dcee0746ff4facc4e7c3908caec4fd85faf10647eda1943"
+    url "https://github.com/opengrep/opengrep/archive/refs/tags/v1.8.4.tar.gz"
+    sha256 "25fa5c2b5f254721e5eac272c507777866979683e7d52c6f11d07d8a147f0be2"
   elsif Hardware::CPU.intel?
     url "https://github.com/opengrep/opengrep/releases/download/v1.2.0/opengrep_osx_amd64"
     sha256 "replace_with_actual_intel_checksum"
