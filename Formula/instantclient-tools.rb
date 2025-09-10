@@ -18,11 +18,17 @@ class InstantclientTools < Formula
   
   def install
     lib.install Dir["*.dylib"]
-    bin.install ["exp", "expdp", "imp", "impdp", "sqlldr", "wrc"]
+    libexec.install ["exp", "expdp", "imp", "impdp", "sqlldr", "wrc"]
     
-    # Always use environment wrapper to ensure proper library loading
-    # This preserves code signing by not modifying the binary
-    bin.env_script_all_files(libexec, "DYLD_LIBRARY_PATH" => HOMEBREW_PREFIX/"lib")
+    # Create wrapper scripts in bin that set environment and call the real binaries
+    # This preserves code signing by not modifying the binaries
+    ["exp", "expdp", "imp", "impdp", "sqlldr", "wrc"].each do |tool|
+      (bin/tool).write <<~EOS
+        #!/bin/bash
+        export DYLD_LIBRARY_PATH="#{lib}:#{HOMEBREW_PREFIX}/lib:$DYLD_LIBRARY_PATH"
+        exec "#{libexec}/#{tool}" "$@"
+      EOS
+    end
   end
   
   test do

@@ -19,11 +19,15 @@ class InstantclientSqlplus < Formula
   
   def install
     lib.install Dir["*.dylib"]
-    bin.install ["sqlplus"]
+    libexec.install "sqlplus"
     
-    # Always use environment wrapper to ensure proper library loading
+    # Create wrapper script in bin that sets environment and calls the real binary
     # This preserves code signing by not modifying the binary
-    bin.env_script_all_files(libexec, "DYLD_LIBRARY_PATH" => HOMEBREW_PREFIX/"lib")
+    (bin/"sqlplus").write <<~EOS
+      #!/bin/bash
+      export DYLD_LIBRARY_PATH="#{lib}:#{HOMEBREW_PREFIX}/lib:$DYLD_LIBRARY_PATH"
+      exec "#{libexec}/sqlplus" "$@"
+    EOS
   end
   
   test do
