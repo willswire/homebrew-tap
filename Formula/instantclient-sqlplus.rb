@@ -16,9 +16,6 @@ class InstantclientSqlplus < Formula
   depends_on "instantclient-basic" if build.without?("basiclite")
   depends_on "instantclient-basiclite" if build.with?("basiclite")
   
-  conflicts_with "instantclient-arm64-sqlplus" do
-    because "this formula now handles both architectures"
-  end
   
   def install
     lib.install Dir["*.dylib"]

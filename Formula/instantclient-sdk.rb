@@ -11,9 +11,6 @@ class InstantclientSdk < Formula
     sha256 "0fa8ae4c4418aa66ce875cf92e728dd7a81aeaf2e68e7926e102b5e52fc8ba4c"
   end
   
-  conflicts_with "instantclient-arm64-sdk" do
-    because "this formula now handles both architectures"
-  end
   
   def install
     lib.install ["sdk"]

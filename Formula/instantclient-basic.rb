@@ -13,10 +13,6 @@ class InstantclientBasic < Formula
   
   conflicts_with "instantclient-basiclite"
   
-  conflicts_with "instantclient-arm64-basic" do
-    because "this formula now handles both architectures"
-  end
-  
   def install
     lib.install Dir["*.dylib*"]
   end
